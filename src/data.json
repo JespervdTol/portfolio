@@ -1,0 +1,195 @@
+{
+    "user": {
+        "email": "234324@student.scalda.nl",
+        "linkedIn" : "https://www.linkedin.com/in/milan-van-der-burgh-606379237/",
+        "github": "https://github.com/Milanvanderburgh",
+        "twitter": "https://x.com/Snickerpad",
+        "instagram": "https://www.instagram.com/justmilan._/"
+    },
+    "settings": {
+        "maxProjects": 4
+    },
+    "projects": [
+        {
+            "image": "https://picsum.photos/500/300?random=1",
+            "image2": "https://picsum.photos/500/300?random=32",
+            "alt": "Project Alpha Image",
+            "title": "Project Alpha",
+            "description": "This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.",
+            "pageDescription": "This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.",
+            "labels": "Technology, Innovation, Alpha",
+            "link1": {
+                "name": "Github",
+                "link": "https://Github.com"
+            },
+            "link2": {
+                "name": "Youtube",
+                "link": "https://youtube.com"
+            }
+        },
+        {
+            "image": "https://picsum.photos/500/300?random=2",
+            "alt": "Project Alpha Image",
+            "title": "Project Alpha",
+            "description": "This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.",
+            "pageDescription": "This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.",
+            "labels": "Technology, Innovation, Alpha",
+            "link1": {
+                "name": "Github",
+                "link": "https://Github.com"
+            },
+            "link2": {
+                "name": "Youtube",
+                "link": "https://youtube.com"
+            }
+        },
+        {
+            "image": "https://picsum.photos/500/300?random=3",
+            "alt": "Project Alpha Image",
+            "title": "Project Alpha",
+            "description": "This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.",
+            "pageDescription": "This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.",
+            "labels": "Technology, Innovation, Alpha",
+            "link1": {
+                "name": "Github",
+                "link": "https://Github.com"
+            },
+            "link2": {
+                "name": "Youtube",
+                "link": "https://youtube.com"
+            }
+        },
+        {
+            "image": "https://picsum.photos/500/300?random=4",
+            "alt": "Project Alpha Image",
+            "title": "Project Alpha",
+            "description": "This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.",
+            "pageDescription": "This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.",
+            "labels": "Technology, Innovation, Alpha",
+            "link1": {
+                "name": "Github",
+                "link": "https://Github.com"
+            },
+            "link2": {
+                "name": "Youtube",
+                "link": "https://youtube.com"
+            }
+        },
+        {
+            "image": "https://picsum.photos/500/300?random=55",
+            "alt": "Project Alpha Image",
+            "title": "Project Alpha",
+            "description": "This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.",
+            "pageDescription": "This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.",
+            "labels": "Technology, Innovation, Alpha",
+            "link1": {
+                "name": "Github",
+                "link": "https://Github.com"
+            },
+            "link2": {
+                "name": "Youtube",
+                "link": "https://youtube.com"
+            }
+        },
+        {
+            "image": "https://picsum.photos/500/300?random=2",
+            "alt": "Project Alpha Image",
+            "title": "Project Alpha",
+            "description": "This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.",
+            "pageDescription": "This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.",
+            "labels": "Technology, Innovation, Alpha",
+            "link1": {
+                "name": "Github",
+                "link": "https://Github.com"
+            },
+            "link2": {
+                "name": "Youtube",
+                "link": "https://youtube.com"
+            }
+        },
+        {
+            "image": "https://picsum.photos/500/300?random=1",
+            "alt": "Project Alpha Image",
+            "title": "Project Alpha",
+            "description": "This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.",
+            "pageDescription": "This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.",
+            "labels": "Technology, Innovation, Alpha",
+            "link1": {
+                "name": "Github",
+                "link": "https://Github.com"
+            },
+            "link2": {
+                "name": "Youtube",
+                "link": "https://youtube.com"
+            }
+        },
+        {
+            "type": "Wireframes/Mockups",
+            "image": "https://picsum.photos/500/300?random=43",
+            "alt": "Project Alpha Image",
+            "title": "Project Alpha",
+            "description": "This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.",
+            "pageDescription": "This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.",
+            "labels": "Technology, Innovation, Alpha",
+            "link1": {
+                "name": "Github",
+                "link": "https://Github.com"
+            },
+            "link2": {
+                "name": "Youtube",
+                "link": "https://youtube.com"
+            }
+        },
+        {
+            "type": "Wireframes/Mockups",
+            "image": "https://picsum.photos/500/300?random=34",
+            "alt": "Project Alpha Image",
+            "title": "Project Alpha",
+            "description": "This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.",
+            "pageDescription": "This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.",
+            "labels": "Technology, Innovation, Alpha",
+            "link1": {
+                "name": "Github",
+                "link": "https://Github.com"
+            },
+            "link2": {
+                "name": "Youtube",
+                "link": "https://youtube.com"
+            }
+        },
+        {
+            "type": "3D Modeling",
+            "image": "https://picsum.photos/500/300?random=66",
+            "alt": "Project Alpha Image",
+            "title": "Project Alpha",
+            "description": "This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.",
+            "pageDescription": "This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.",
+            "labels": "Technology, Innovation, Alpha",
+            "link1": {
+                "name": "Github",
+                "link": "https://Github.com"
+            },
+            "link2": {
+                "name": "Youtube",
+                "link": "https://youtube.com"
+            }
+        },
+        {
+            "type": "3D Modeling",
+            "image": "https://picsum.photos/500/300?random=69",
+            "alt": "Project Alpha Image",
+            "title": "3D Modeling",
+            "description": "This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.",
+            "pageDescription": "This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.",
+            "labels": "Technology, Innovation, Alpha",
+            "link1": {
+                "name": "Github",
+                "link": "https://Github.com"
+            },
+            "link2": {
+                "name": "Youtube",
+                "link": "https://youtube.com"
+            }
+        }
+    ]
+}
