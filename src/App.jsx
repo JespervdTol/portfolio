@@ -5,6 +5,7 @@ import './App.scss';
 import StyledButton from './components/StyledButton';
 import ProjectElement from './components/ProjectElement';
 import AboutElement from './components/AboutElement';
+import Slideshow from './components/Slideshow';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane, faUser, faPersonHiking, faMedal, faHouse, faHammer, faEnvelope, faCircleUser } from '@fortawesome/free-solid-svg-icons';
 import { faGithubSquare, faInstagramSquare, faLinkedin, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
@@ -16,9 +17,15 @@ function App({ currentPage, setCurrentPage }) {
   const projects = data.projects;
 
   const homePage = useRef(null);
-  const aboutPage = useRef(null);
+  const biographyPage = useRef(null);
   const projectsPage = useRef(null);
   const contactPage = useRef(null);
+
+  const images = [
+    'images/Basak2.png',
+    'images/Basak3.png',
+    'images/Basak4.png'
+  ];
 
   const [activeSection, setActiveSection] = useState(null);
   const [viewAll, setViewAll] = useState(false);
@@ -35,7 +42,7 @@ function App({ currentPage, setCurrentPage }) {
     const observer = new IntersectionObserver(handleIntersection, options);
 
     observer.observe(homePage.current);
-    observer.observe(aboutPage.current);
+    observer.observe(biographyPage.current);
     observer.observe(projectsPage.current);
     observer.observe(contactPage.current);
 
@@ -53,9 +60,9 @@ function App({ currentPage, setCurrentPage }) {
   return (
     <>
       {/* Navigation */}
-      <div id="navigation" className="d-flex justify-content-center align-items-center position-fixed gap-5 mt-5 start-50 translate-middle">
+      <div id="navigation" className="d-flex align-items-center position-fixed gap-5 mt-5 start-50 translate-middle">
         <button className={activeSection === 'homePage' ? 'active' : ''} onClick={() => homePage.current.scrollIntoView({ behavior: 'smooth' })}>Home</button>
-        <button className={activeSection === 'aboutPage' ? 'active' : ''} onClick={() => aboutPage.current.scrollIntoView({ behavior: 'smooth' })}>Work</button>
+        <button className={activeSection === 'biographyPage' ? 'active' : ''} onClick={() => biographyPage.current.scrollIntoView({ behavior: 'smooth' })}>Biography</button>
         <button className={activeSection === 'projectsPage' ? 'active' : ''} onClick={() => projectsPage.current.scrollIntoView({ behavior: 'smooth' })}>Experience</button>
         <button className={activeSection === 'contactPage' ? 'active' : ''} onClick={() => contactPage.current.scrollIntoView({ behavior: 'smooth' })}>Contact</button>
       </div>
@@ -65,51 +72,56 @@ function App({ currentPage, setCurrentPage }) {
         <div className="col-lg-6 d-flex flex-column justify-content-center gap-5">
           <h1 className='mainColor title'>Başak <span className='title'>Su Günal</span> {currentPage.pageName} </h1>
           <span>
-            <p className='smallText'>Student at Maastricht University Science Program.</p>
-            <p className='mediumText'>Science and Engineering faculty</p>
-            <p className='mediumText'>Bachelor of Science</p>
+            <p className='homeText1'>Student at Maastricht University Science Program</p>
+            <p className='homeText2'>Science and Engineering faculty</p>
+            <p className='homeText3'>Bachelor of Science</p>
           </span>
           <StyledButton text="Contact me" onClick={() => contactPage.current.scrollIntoView({ behavior: 'smooth' })} />
         </div>
-          <div className="col-lg-6 d-flex justify-content-center align-items-center">
-            <img className='mainPicture' src="images/MainPicture.png" alt="main" />
+        <div className="col-lg-6 d-flex justify-content-center align-items-center mt-5">
+            <img className='mainPicture' src="images/Basak1.png" alt="main" />
         </div>
       </div>
 
-      {/* About me */}
-      <div ref={aboutPage} id='aboutPage' className="page">
-        <h1 className='text-center title'>About me</h1>
-        <div className="row justify-content-between position-relative gap-5">
-          <hr className="line lineTop position-absolute"></hr>
-          <AboutElement icon={faUser} title="Myself" description="Learn more about my hobbies and teamroles." onClick={() => setCurrentPage("Myself")} />
-          <AboutElement icon={faPersonHiking} title="Experience" description="Find out why I chose this career path and how it is going so far." onClick={() => setCurrentPage("Experience")} />
-          <AboutElement icon={faMedal} title="Skills" description="Find out what kinds of skills I posess." onClick={() => setCurrentPage("Skills")} />
-          <hr className="line lineBottom position-absolute"></hr>
+      {/* Biography */}
+      <div ref={biographyPage} id='biographyPage' className='margin'></div>
+      <div className="page">
+        <div className="row">
+          <div className="col-lg-6 d-flex flex-column justify-content-center align-items-center mt-5">
+            <Slideshow images={images} />
+          </div>
+          <div className="col-lg-6 mt-5">
+            <div className="d-flex flex-column">
+              <h1 className='title mb-4'>Biography</h1>
+              <p className="mb-4">My name is Başak Su Günal and I am 19 years old. I have lived in Turkiye my whole life however I moved to the Netherlands when I was 17 to start university. 
+                My favorite city is Istanbul and my favorite part of the city is the cats. I want to focus on neurology and genetics therefore I decided to move abroad to follow my ambitions. I am currently studying in Maastricht University. At some point in my life I want to go all over the world however I also want to become a scientist and help the community.
+              </p>
+              <div className="d-flex justify-content-center gap-5">
+                <StyledButton text="Skills" onClick={() => setCurrentPage("Skills")}  />
+                <StyledButton text="Ambitions" onClick={() => setCurrentPage("Skills")}  />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
       {/* Projects */}
-      <div ref={projectsPage} id='projectsPage' className="page position-relative">
+      <div ref={projectsPage} id='projectsPage' className='margin'></div>
+      <div className="page position-relative">
         <h1 className='text-center title'>Projects</h1>
         <div className="row gap-5 justify-content-center">
-          {projects.slice(0, viewAll ? projects.length : settings.maxProjects).filter(project => viewOthers || project.type === undefined).map((project, index) => (
-            <ProjectElement
-              key={index}
-              project={project}
-              setCurrentPage={() => setCurrentPage(index)}
-            />
-          ))}
+         Tekst
         </div>
         <div className="d-flex">
-          {projects.length != settings.maxProjects && !viewOthers ? <StyledButton text={viewAll ? "View less" : "View all"} className="px-5 mx-auto mt-4" onClick={() => setViewAll(!viewAll)} /> : ""}
-          {viewAll && hasOtherProjects ? <StyledButton text={viewOthers ? "View related projects" : "View non related projects"} className="px-5 mx-auto mt-4" onClick={() => setViewOthers(!viewOthers)} /> : ""}
+        Tekst 2
         </div>
         <hr className="line lineLeft position-absolute"></hr>
         <hr className="line lineRight position-absolute"></hr>
       </div>
 
       {/* Contact */}
-      <div ref={contactPage} id='contactPage' className="page row justify-content-between">
+      <div ref={contactPage} id='contactPage' className='margin'></div>
+      <div className="page row justify-content-between">
         <div className="col-md-4 my-auto px-2 text-center">
           <FontAwesomeIcon icon={faPaperPlane} fontSize={200} className='mb-4' />
           <span className='text-start'>

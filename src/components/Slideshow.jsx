@@ -6,6 +6,10 @@ const Slideshow = ({ images }) => {
 
   useEffect(() => {
     showSlides(slideIndex);
+    const interval = setInterval(() => {
+        plusSlides(1);
+      }, 8000);
+      return () => clearInterval(interval);
   }, [slideIndex]);
 
   const plusSlides = (n) => {
@@ -67,8 +71,10 @@ const Slideshow = ({ images }) => {
       </div>
 
       {/* Next and previous buttons */}
-      <a className="prev" onClick={() => plusSlides(-1)}>&#10094;</a>
-      <a className="next" onClick={() => plusSlides(1)}>&#10095;</a>
+      <div className='arrows'>
+        <a className="prev" onClick={() => plusSlides(-1)}>&#10094;</a>
+        <a className="next" onClick={() => plusSlides(1)}>&#10095;</a>
+      </div>
     </div>
   );
 };
