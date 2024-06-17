@@ -18,7 +18,7 @@ function App({ currentPage, setCurrentPage }) {
 
   const homePage = useRef(null);
   const biographyPage = useRef(null);
-  const projectsPage = useRef(null);
+  const experiencePage = useRef(null);
   const contactPage = useRef(null);
 
   const images = [
@@ -43,7 +43,7 @@ function App({ currentPage, setCurrentPage }) {
 
     observer.observe(homePage.current);
     observer.observe(biographyPage.current);
-    observer.observe(projectsPage.current);
+    observer.observe(experiencePage.current);
     observer.observe(contactPage.current);
 
     return () => observer.disconnect();
@@ -63,7 +63,7 @@ function App({ currentPage, setCurrentPage }) {
       <div id="navigation" className="d-flex align-items-center position-fixed gap-5 mt-5 start-50 translate-middle">
         <button className={activeSection === 'homePage' ? 'active' : ''} onClick={() => homePage.current.scrollIntoView({ behavior: 'smooth' })}>Home</button>
         <button className={activeSection === 'biographyPage' ? 'active' : ''} onClick={() => biographyPage.current.scrollIntoView({ behavior: 'smooth' })}>Biography</button>
-        <button className={activeSection === 'projectsPage' ? 'active' : ''} onClick={() => projectsPage.current.scrollIntoView({ behavior: 'smooth' })}>Experience</button>
+        <button className={activeSection === 'experiencePage' ? 'active' : ''} onClick={() => experiencePage.current.scrollIntoView({ behavior: 'smooth' })}>Experience</button>
         <button className={activeSection === 'contactPage' ? 'active' : ''} onClick={() => contactPage.current.scrollIntoView({ behavior: 'smooth' })}>Contact</button>
       </div>
 
@@ -84,8 +84,9 @@ function App({ currentPage, setCurrentPage }) {
       </div>
 
       {/* Biography */}
-      <div ref={biographyPage} id='biographyPage' className='margin'></div>
-      <div className="page">
+      <br></br>
+      <div ref={biographyPage} id='biographyPage'></div>
+      <div className="page d-flex justify-content-center align-items-center">
         <div className="row">
           <div className="col-lg-6 d-flex flex-column justify-content-center align-items-center mt-5">
             <Slideshow images={images} />
@@ -98,28 +99,40 @@ function App({ currentPage, setCurrentPage }) {
               </p>
               <div className="d-flex justify-content-center gap-5">
                 <StyledButton text="Skills" onClick={() => setCurrentPage("Skills")}  />
-                <StyledButton text="Ambitions" onClick={() => setCurrentPage("Skills")}  />
+                <StyledButton text="Ambitions" onClick={() => setCurrentPage("Ambitions")}  />
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Projects */}
-      <div ref={projectsPage} id='projectsPage' className='margin'></div>
-      <div className="page position-relative">
-        <h1 className='text-center title'>Projects</h1>
-        <div className="row gap-5 justify-content-center">
-         Tekst
+      {/* Experience */}
+      <br></br>
+      <div ref={experiencePage} id='experiencePage'></div>
+      <div className="page d-flex justify-content-center mt-5">
+        <div className="container mt-5">
+          <h1 className='text-center title mt-5 mb-5'>Experience</h1>
+          <p className="mb-4">My name is Başak Su Günal and I am 19 years old. I have lived in Turkiye my whole life however I moved to the Netherlands when I was 17 to start university. 
+                My favorite city is Istanbul and my favorite part of the city is the cats. I want to focus on neurology and genetics therefore I decided to move abroad to follow my ambitions. I am currently studying in Maastricht University. At some point in my life I want to go all over the world however I also want to become a scientist and help the community.
+              </p>
+          <div className="row justify-content-center mt-5 ">
+            {projects
+              .slice(0, viewAll ? projects.length : settings.maxProjects)
+              .filter(project => viewOthers || project.type === undefined)
+              .map((project, index) => (
+                <div className="col-md-4 mb-4" key={index}>
+                  <ProjectElement
+                    project={project}
+                    setCurrentPage={() => setCurrentPage(index)}
+                  />
+                </div>
+              ))}
+          </div>
         </div>
-        <div className="d-flex">
-        Tekst 2
-        </div>
-        <hr className="line lineLeft position-absolute"></hr>
-        <hr className="line lineRight position-absolute"></hr>
       </div>
 
       {/* Contact */}
+      <br></br>
       <div ref={contactPage} id='contactPage' className='margin'></div>
       <div className="page row justify-content-between">
         <div className="col-md-4 my-auto px-2 text-center">
