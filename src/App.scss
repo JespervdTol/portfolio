@@ -133,6 +133,10 @@ img {
   color: black;
 }
 
+.background {
+  background-color: $mainColor;
+}
+
 .mainColor {
   color: $mainColor;
 }
@@ -315,19 +319,27 @@ body {
 
 .projectElement img {
   width: 100%;
+  border: solid;
+  border-bottom: none;
+  border-right: none;
+  border-left: none;
   border-radius: 0px 0px 7px 7px;
 }
 
 .projectElement:hover {
   cursor: pointer;
   scale: 0.95;
-  border-color: $mainColor;
+  border-color: $secondaryColor;
 }
 
 .projectElement {
-  border: solid 4px $mainColor;
+  border: solid 4px $secondaryColor;
   padding: 0;
   border-radius: 10px;
+}
+
+.projectHeader {
+  border-radius: 6px 6px 0px 0px;
 }
 
 // Contact
@@ -366,6 +378,25 @@ body {
 
 #contactPage p {
   margin: 0;
+}
+
+.contact-header {
+  background-color: $mainColor;
+  border: solid;
+}
+
+.contact-body {
+  border: solid;
+  border-top: none;
+  border-radius: 0px 0px 8px 8px;
+}
+
+.social-icon {
+  cursor: pointer;
+}
+
+.social-icon:hover {
+  transform: translateY(-5px);
 }
 
 // newPage

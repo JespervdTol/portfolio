@@ -11,9 +11,9 @@ const ProjectElement = ({ project, setCurrentPage }) => {
 
   return (
     <div className="projectElement" onClick={handleClick}>
-      <div className="background d-flex flex-column p-3 pb-0">
+      <div className="background projectHeader d-flex flex-column p-3 pb-0">
         <div className="d-flex justify-content-between align-items-center">
-          <h5 className='secondaryColor d-flex mb-3'>{title}</h5>
+          <h5 className='secondaryColor fw-bold d-flex mb-3'>{title}</h5>
         </div>
       </div>
       <LazyLoad height={250} offset={100}>

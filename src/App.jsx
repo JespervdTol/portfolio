@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
 import StyledButton from './components/StyledButton';
@@ -7,13 +6,13 @@ import ProjectElement from './components/ProjectElement';
 import AboutElement from './components/AboutElement';
 import Slideshow from './components/Slideshow';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPaperPlane, faUser, faPersonHiking, faMedal, faHouse, faHammer, faEnvelope, faCircleUser } from '@fortawesome/free-solid-svg-icons';
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { faGithubSquare, faInstagramSquare, faLinkedin, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
 import data from './data.json';
 
-function App({ currentPage, setCurrentPage }) {
+const App = ({ currentPage, setCurrentPage }) => {
   const user = data.user;
-  const settings = data.settings
+  const settings = data.settings;
   const projects = data.projects;
 
   const homePage = useRef(null);
@@ -21,17 +20,10 @@ function App({ currentPage, setCurrentPage }) {
   const experiencePage = useRef(null);
   const contactPage = useRef(null);
 
-  const images = [
-    'images/Basak2.png',
-    'images/Basak3.png',
-    'images/Basak4.png'
-  ];
+  const images = ['images/Basak2.png', 'images/Basak3.png', 'images/Basak4.png'];
 
   const [activeSection, setActiveSection] = useState(null);
-  const [viewAll, setViewAll] = useState(false);
-  const [viewOthers, setViewOthers] = useState(false);
 
-  const hasOtherProjects = projects.some(project => project.type !== undefined);
   useEffect(() => {
     const options = {
       root: null,
@@ -41,10 +33,10 @@ function App({ currentPage, setCurrentPage }) {
 
     const observer = new IntersectionObserver(handleIntersection, options);
 
-    observer.observe(homePage.current);
-    observer.observe(biographyPage.current);
-    observer.observe(experiencePage.current);
-    observer.observe(contactPage.current);
+    if (homePage.current) observer.observe(homePage.current);
+    if (biographyPage.current) observer.observe(biographyPage.current);
+    if (experiencePage.current) observer.observe(experiencePage.current);
+    if (contactPage.current) observer.observe(contactPage.current);
 
     return () => observer.disconnect();
   }, []);
@@ -79,7 +71,7 @@ function App({ currentPage, setCurrentPage }) {
           <StyledButton text="Contact me" onClick={() => contactPage.current.scrollIntoView({ behavior: 'smooth' })} />
         </div>
         <div className="col-lg-6 d-flex justify-content-center align-items-center mt-5">
-            <img className='mainPicture' src="images/Basak1.png" alt="main" />
+          <img className='mainPicture' src="images/Basak1.png" alt="main" />
         </div>
       </div>
 
@@ -115,10 +107,9 @@ function App({ currentPage, setCurrentPage }) {
           <p className="mb-4">My name is Başak Su Günal and I am 19 years old. I have lived in Turkiye my whole life however I moved to the Netherlands when I was 17 to start university. 
                 My favorite city is Istanbul and my favorite part of the city is the cats. I want to focus on neurology and genetics therefore I decided to move abroad to follow my ambitions. I am currently studying in Maastricht University. At some point in my life I want to go all over the world however I also want to become a scientist and help the community.
               </p>
-          <div className="row justify-content-center mt-5 ">
+          <div className="row justify-content-center mt-5">
             {projects
-              .slice(0, viewAll ? projects.length : settings.maxProjects)
-              .filter(project => viewOthers || project.type === undefined)
+              .slice(0, settings.maxProjects)
               .map((project, index) => (
                 <div className="col-md-4 mb-4" key={index}>
                   <ProjectElement
@@ -133,46 +124,80 @@ function App({ currentPage, setCurrentPage }) {
 
       {/* Contact */}
       <br></br>
-      <div ref={contactPage} id='contactPage' className='margin'></div>
-      <div className="page row justify-content-between">
-        <div className="col-md-4 my-auto px-2 text-center">
-          <FontAwesomeIcon icon={faPaperPlane} fontSize={200} className='mb-4' />
-          <span className='text-start'>
-            <h1>Get in touch</h1>
-            <h5>I'd love to hear from you!</h5>
-          </span>
-          <hr />
-          <div id='socials' className="d-flex justify-content-between px-5 mt-5">
-            <FontAwesomeIcon icon={faLinkedin} fontSize={50} onClick={() => window.open(user.linkedIn, '_blank')} />
-            <FontAwesomeIcon icon={faGithubSquare} fontSize={50} onClick={() => window.open(user.github, '_blank')} />
-            <FontAwesomeIcon icon={faTwitterSquare} fontSize={50} onClick={() => window.open(user.twitter, '_blank')} />
-            <FontAwesomeIcon icon={faInstagramSquare} fontSize={50} onClick={() => window.open(user.instagram, '_blank')} />
+      <div ref={contactPage} id='contactPage'></div>
+      <div className="page container mt-5">
+        <div className="row justify-content-center">
+          <div className="col-md-8 mt-5">
+            <div className="card shadow-lg border-0 rounded-lg mt-5">
+              <div className="contact-header card-header py-3">
+                <h3 className="contact-text text-center fw-bold">Contact me</h3>
+              </div>
+              <div className="contact-body card-body">
+                <form>
+                  <div className="form-group mb-3">
+                    <label htmlFor="nameInput">Name</label>
+                    <input type="text" id="nameInput" className="form-control" placeholder="Your Name" required />
+                  </div>
+                  <div className="form-group mb-3">
+                    <label htmlFor="emailInput">Email</label>
+                    <input type="email" id="emailInput" className="form-control" placeholder="Your Email" required />
+                  </div>
+                  <div className="form-group mb-3">
+                    <label htmlFor="subjectInput">Subject</label>
+                    <input type="text" id="subjectInput" className="form-control" placeholder="Subject" required />
+                  </div>
+                  <div className="form-group mb-3">
+                    <label htmlFor="messageInput">Message</label>
+                    <textarea id="messageInput" className="form-control" rows="5" placeholder="Your Message" required></textarea>
+                  </div>
+                  <StyledButton className="float-end mt-4" text='Send' onClick={() => {
+                    const nameInput = document.getElementById('nameInput');
+                    const emailInput = document.getElementById('emailInput');
+                    const subjectInput = document.getElementById('subjectInput');
+                    const messageInput = document.getElementById('messageInput');
+
+                    const name = encodeURIComponent(nameInput.value);
+                    const email = encodeURIComponent(emailInput.value);
+                    const subject = encodeURIComponent(subjectInput.value);
+                    const message = encodeURIComponent(messageInput.value);
+
+                    const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=${user.email}&su=${subject}&body=From ${name} (${email}),%0A%0A${message}`;
+
+                    window.open(mailtoLink, '_blank');
+                  }} />
+                </form>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="col-md-6 my-auto">
-          <label>Name</label>
-          <input id='nameInput' className='mb-3' type="text" />
-          <label>Subject</label>
-          <input id='subjectInput' className='mb-3' type="text" />
-          <label>Message</label>
-          <textarea id='messageInput' type="text" rows={5} />
-          <StyledButton className="float-end mt-4" text='Send' onClick={() => {
-            const nameInput = document.getElementById('nameInput');
-            const subjectInput = document.getElementById('subjectInput');
-            const messageInput = document.getElementById('messageInput');
-
-            const name = encodeURIComponent(nameInput.value);
-            const subject = encodeURIComponent(subjectInput.value);
-            const message = encodeURIComponent(messageInput.value);
-
-            const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=${user.email}&su=${subject}&body=From ${name},%0A%0A${message}`;
-
-            window.open(mailtoLink, '_blank');
-          }} />
+        <div className="row justify-content-center mt-5">
+          <div className="col-md-4 text-center">
+            <h5>Find me on socials!</h5>
+            <div id='socials' className="d-flex justify-content-around mt-4">
+              <FontAwesomeIcon
+                icon={faLinkedin}
+                fontSize={50}
+                onClick={() => window.open(user.linkedIn, '_blank')}
+                className="social-icon"
+              />
+              <FontAwesomeIcon
+                icon={faInstagramSquare}
+                fontSize={50}
+                onClick={() => window.open(user.instagram, '_blank')}
+                className="social-icon"
+              />
+              <FontAwesomeIcon
+                icon={faTwitterSquare}
+                fontSize={50}
+                onClick={() => window.open(user.twitter, '_blank')}
+                className="social-icon"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

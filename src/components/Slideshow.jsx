@@ -72,8 +72,8 @@ const Slideshow = ({ images }) => {
 
       {/* Next and previous buttons */}
       <div className='arrows'>
-        <a className="prev" onClick={() => plusSlides(-1)}>&#10094;</a>
-        <a className="next" onClick={() => plusSlides(1)}>&#10095;</a>
+        <span className="prev" onClick={() => plusSlides(-1)}>&#10094;</span>
+        <span className="next" onClick={() => plusSlides(1)}>&#10095;</span>
       </div>
     </div>
   );
