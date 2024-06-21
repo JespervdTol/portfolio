@@ -104,9 +104,10 @@ const App = ({ currentPage, setCurrentPage }) => {
       <div className="page d-flex justify-content-center mt-5">
         <div className="container mt-5">
           <h1 className='text-center title mt-5 mb-5'>Experience</h1>
-          <p className="mb-4">My name is Başak Su Günal and I am 19 years old. I have lived in Turkiye my whole life however I moved to the Netherlands when I was 17 to start university. 
-                My favorite city is Istanbul and my favorite part of the city is the cats. I want to focus on neurology and genetics therefore I decided to move abroad to follow my ambitions. I am currently studying in Maastricht University. At some point in my life I want to go all over the world however I also want to become a scientist and help the community.
-              </p>
+          <p className="mb-4">Lorem ipsum dolor sit amet. In tempore tempore qui quis nesciunt sit dolor nihil ut ipsum repellat. Ut expedita consequatur ut fugiat numquam sit omnis consequatur id mollitia quia qui aspernatur autem!
+              Et voluptates nesciunt a sunt enim non quae expedita ut amet provident est rerum distinctio. A delectus dignissimos eos porro dignissimos est reiciendis dolores.
+              Sit voluptas repellat vel totam consequatur eos perferendis distinctio. Ad adipisci tenetur et voluptatem temporibus et doloribus deserunt qui commodi voluptatem. Aut accusantium officiis aut odit dolores a reprehenderit commodi.
+          </p>
           <div className="row justify-content-center mt-5">
             {projects
               .slice(0, settings.maxProjects)

@@ -1,6 +1,6 @@
 {
     "user": {
-        "email": "237727@student.scalda.nl",
+        "email": "jvdtoltest@gmail.com",
         "linkedIn" : "https://www.linkedin.com/in/basak-gunal-436010263/",
         "twitter": "https://x.com/",
         "instagram": "https://www.instagram.com/basak.gunal/"
@@ -10,119 +10,47 @@
     },
     "projects": [
         {
-            "image": "https://picsum.photos/500/300?random=55",
-            "alt": "Project Alpha Image",
-            "title": "Project Alpha",
-            "description": "This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.",
-            "pageDescription": "This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.",
-            "labels": "Technology, Innovation, Alpha",
+            "image": "projects/Basak1.png",
+            "image2": "projects/Basak1.png",
+            "image3": "projects/Basak1.png",
+            "image4": "projects/Basak1.png",
+            "image5": "projects/Basak1.png",
+            "alt": "Project Image",
+            "title": "Internship",
+            "description": "Lorem ipsum dolor sit amet. Ea quas rerum sit unde quam et alias atque vel deserunt possimus. Nam aspernatur quibusdam At quam voluptatem rem labore consequatur sit fugit exercitationem. Non galisum voluptatum qui fugiat harum qui culpa rerum.",
+            "pageDescription": "Lorem ipsum dolor sit amet. Ea quas rerum sit unde quam et alias atque vel deserunt possimus. Nam aspernatur quibusdam At quam voluptatem rem labore consequatur sit fugit exercitationem. Non galisum voluptatum qui fugiat harum qui culpa rerum.",
+            "labels": "Internship, America, Iowa, University, Science, Scientist, Parkinsons",
             "link1": {
-                "name": "Github",
-                "link": "https://Github.com"
-            },
-            "link2": {
-                "name": "Youtube",
-                "link": "https://youtube.com"
+                "name": "Link",
+                "link": "https://www.ishetalvrijdag.nl/"
             }
         },
         {
-            "image": "https://picsum.photos/500/300?random=2",
-            "alt": "Project Alpha Image",
-            "title": "Project Alpha",
-            "description": "This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.",
-            "pageDescription": "This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.",
-            "labels": "Technology, Innovation, Alpha",
+            "image": "projects/Basak1.png",
+            "image2": "projects/Basak1.png",
+            "image3": "projects/Basak1.png",
+            "image4": "projects/Basak1.png",
+            "alt": "Project Image",
+            "title": "Project 1",
+            "description": "Lorem ipsum dolor sit amet. Ea quas rerum sit unde quam et alias atque vel deserunt possimus. Nam aspernatur quibusdam At quam voluptatem rem labore consequatur sit fugit exercitationem. Non galisum voluptatum qui fugiat harum qui culpa rerum.",
+            "pageDescription": "Lorem ipsum dolor sit amet. Ea quas rerum sit unde quam et alias atque vel deserunt possimus. Nam aspernatur quibusdam At quam voluptatem rem labore consequatur sit fugit exercitationem. Non galisum voluptatum qui fugiat harum qui culpa rerum.",
+            "labels": "Project 1, America, Iowa, University, Science, Scientist, Parkinsons",
             "link1": {
-                "name": "Github",
-                "link": "https://Github.com"
-            },
-            "link2": {
-                "name": "Youtube",
-                "link": "https://youtube.com"
+                "name": "Link",
+                "link": "https://www.ishetalvrijdag.nl/"
             }
         },
         {
-            "image": "https://picsum.photos/500/300?random=1",
-            "alt": "Project Alpha Image",
-            "title": "Project Alpha",
-            "description": "This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.",
-            "pageDescription": "This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.",
-            "labels": "Technology, Innovation, Alpha",
+            "image": "projects/Basak1.png",
+            "image2": "projects/Basak1.png",
+            "alt": "Project Image",
+            "title": "Project 2",
+            "description": "Lorem ipsum dolor sit amet. Ea quas rerum sit unde quam et alias atque vel deserunt possimus. Nam aspernatur quibusdam At quam voluptatem rem labore consequatur sit fugit exercitationem. Non galisum voluptatum qui fugiat harum qui culpa rerum.",
+            "pageDescription": "Lorem ipsum dolor sit amet. Ea quas rerum sit unde quam et alias atque vel deserunt possimus. Nam aspernatur quibusdam At quam voluptatem rem labore consequatur sit fugit exercitationem. Non galisum voluptatum qui fugiat harum qui culpa rerum.",
+            "labels": "Project 2, America, Iowa, University, Science, Scientist, Parkinsons",
             "link1": {
-                "name": "Github",
-                "link": "https://Github.com"
-            },
-            "link2": {
-                "name": "Youtube",
-                "link": "https://youtube.com"
-            }
-        },
-        {
-            "type": "Wireframes/Mockups",
-            "image": "https://picsum.photos/500/300?random=43",
-            "alt": "Project Alpha Image",
-            "title": "Project Alpha",
-            "description": "This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.",
-            "pageDescription": "This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.",
-            "labels": "Technology, Innovation, Alpha",
-            "link1": {
-                "name": "Github",
-                "link": "https://Github.com"
-            },
-            "link2": {
-                "name": "Youtube",
-                "link": "https://youtube.com"
-            }
-        },
-        {
-            "type": "Wireframes/Mockups",
-            "image": "https://picsum.photos/500/300?random=34",
-            "alt": "Project Alpha Image",
-            "title": "Project Alpha",
-            "description": "This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.",
-            "pageDescription": "This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.",
-            "labels": "Technology, Innovation, Alpha",
-            "link1": {
-                "name": "Github",
-                "link": "https://Github.com"
-            },
-            "link2": {
-                "name": "Youtube",
-                "link": "https://youtube.com"
-            }
-        },
-        {
-            "type": "3D Modeling",
-            "image": "https://picsum.photos/500/300?random=66",
-            "alt": "Project Alpha Image",
-            "title": "Project Alpha",
-            "description": "This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.",
-            "pageDescription": "This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.",
-            "labels": "Technology, Innovation, Alpha",
-            "link1": {
-                "name": "Github",
-                "link": "https://Github.com"
-            },
-            "link2": {
-                "name": "Youtube",
-                "link": "https://youtube.com"
-            }
-        },
-        {
-            "type": "3D Modeling",
-            "image": "https://picsum.photos/500/300?random=69",
-            "alt": "Project Alpha Image",
-            "title": "3D Modeling",
-            "description": "This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.",
-            "pageDescription": "This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.This is a description of Project Alpha, showcasing innovative approaches to problem-solving in technology.",
-            "labels": "Technology, Innovation, Alpha",
-            "link1": {
-                "name": "Github",
-                "link": "https://Github.com"
-            },
-            "link2": {
-                "name": "Youtube",
-                "link": "https://youtube.com"
+                "name": "Link",
+                "link": "https://www.ishetalvrijdag.nl/"
             }
         }
     ]
