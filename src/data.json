@@ -10,15 +10,15 @@
     },
     "projects": [
         {
-            "image": "projects/Basak1.png",
+            "image": "projects/MaastrichtUniversity.png",
             "image2": "projects/Basak1.png",
             "image3": "projects/Basak1.png",
             "image4": "projects/Basak1.png",
             "image5": "projects/Basak1.png",
             "alt": "Project Image",
             "title": "Internship",
-            "description": "Lorem ipsum dolor sit amet. Ea quas rerum sit unde quam et alias atque vel deserunt possimus. Nam aspernatur quibusdam At quam voluptatem rem labore consequatur sit fugit exercitationem. Non galisum voluptatum qui fugiat harum qui culpa rerum.",
-            "pageDescription": "Lorem ipsum dolor sit amet. Ea quas rerum sit unde quam et alias atque vel deserunt possimus. Nam aspernatur quibusdam At quam voluptatem rem labore consequatur sit fugit exercitationem. Non galisum voluptatum qui fugiat harum qui culpa rerum.",
+            "description": "Lorem ipsum dolor sit amet. Ea quas rerum sit unde quam et alias atque vel deserunt possimus. Nam aspernatur quibusdam At quam voluptatem rem labore consequatur sit fugit exercitationem.",
+            "pageDescription": "Lorem ipsum dolor sit amet. Ea quas rerum sit unde quam et alias atque vel deserunt possimus. Nam aspernatur quibusdam At quam voluptatem rem labore consequatur sit fugit exercitationem.",
             "labels": "Internship, America, Iowa, University, Science, Scientist, Parkinsons",
             "link1": {
                 "name": "Link",
@@ -26,7 +26,7 @@
             }
         },
         {
-            "image": "projects/Basak1.png",
+            "image": "projects/MaastrichtUniversity.png",
             "image2": "projects/Basak1.png",
             "image3": "projects/Basak1.png",
             "image4": "projects/Basak1.png",
@@ -41,7 +41,7 @@
             }
         },
         {
-            "image": "projects/Basak1.png",
+            "image": "projects/MaastrichtUniversity.png",
             "image2": "projects/Basak1.png",
             "alt": "Project Image",
             "title": "Project 2",

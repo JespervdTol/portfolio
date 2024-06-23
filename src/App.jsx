@@ -105,8 +105,7 @@ const App = ({ currentPage, setCurrentPage }) => {
         <div className="container mt-5">
           <h1 className='text-center title mt-5 mb-5'>Experience</h1>
           <p className="mb-4">Lorem ipsum dolor sit amet. In tempore tempore qui quis nesciunt sit dolor nihil ut ipsum repellat. Ut expedita consequatur ut fugiat numquam sit omnis consequatur id mollitia quia qui aspernatur autem!
-              Et voluptates nesciunt a sunt enim non quae expedita ut amet provident est rerum distinctio. A delectus dignissimos eos porro dignissimos est reiciendis dolores.
-              Sit voluptas repellat vel totam consequatur eos perferendis distinctio. Ad adipisci tenetur et voluptatem temporibus et doloribus deserunt qui commodi voluptatem. Aut accusantium officiis aut odit dolores a reprehenderit commodi.
+              Et voluptates nesciunt a sunt enim non quae expedita ut amet provident est rerum distinctio.
           </p>
           <div className="row justify-content-center mt-5">
             {projects
@@ -149,7 +148,7 @@ const App = ({ currentPage, setCurrentPage }) => {
                   </div>
                   <div className="form-group mb-3">
                     <label htmlFor="messageInput">Message</label>
-                    <textarea id="messageInput" className="form-control" rows="5" placeholder="Your Message" required></textarea>
+                    <textarea id="messageInput" className="form-control" rows="3" placeholder="Your Message" required></textarea>
                   </div>
                   <StyledButton className="float-end mt-4" text='Send' onClick={() => {
                     const nameInput = document.getElementById('nameInput');
@@ -194,6 +193,7 @@ const App = ({ currentPage, setCurrentPage }) => {
                 className="social-icon"
               />
             </div>
+            <br></br>
           </div>
         </div>
       </div>
