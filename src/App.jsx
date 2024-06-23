@@ -65,8 +65,8 @@ const App = ({ currentPage, setCurrentPage }) => {
           <h1 className='mainColor title'>Başak <span className='title'>Su Günal</span> {currentPage.pageName} </h1>
           <span>
             <p className='homeText1'>Student at Maastricht University Science Program</p>
-            <p className='homeText2'>Science and Engineering faculty</p>
-            <p className='homeText3'>Bachelor of Science</p>
+            <p className='mainColor homeText2'>Science and Engineering faculty</p>
+            <p className='homeText2'>Bachelor of Science</p>
           </span>
           <StyledButton text="Contact me" onClick={() => contactPage.current.scrollIntoView({ behavior: 'smooth' })} />
         </div>
