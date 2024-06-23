@@ -11,10 +11,10 @@
     "projects": [
         {
             "image": "projects/MaastrichtUniversity.png",
-            "image2": "projects/Basak1.png",
-            "image3": "projects/Basak1.png",
-            "image4": "projects/Basak1.png",
-            "image5": "projects/Basak1.png",
+            "image2": "projects/dummy.jpeg",
+            "image3": "projects/dummy.jpeg",
+            "image4": "projects/dummy.jpeg",
+            "image5": "projects/dummy.jpeg",
             "alt": "Project Image",
             "title": "Internship",
             "description": "Lorem ipsum dolor sit amet. Ea quas rerum sit unde quam et alias atque vel deserunt possimus. Nam aspernatur quibusdam At quam voluptatem rem labore consequatur sit fugit exercitationem.",
@@ -27,14 +27,14 @@
         },
         {
             "image": "projects/MaastrichtUniversity.png",
-            "image2": "projects/Basak1.png",
-            "image3": "projects/Basak1.png",
-            "image4": "projects/Basak1.png",
-            "alt": "Project Image",
-            "title": "Project 1",
+            "image2": "projects/dummy.jpeg",
+            "image3": "projects/dummy.jpeg",
+            "image4": "projects/dummy.jpeg",
+            "alt": "Experience Image",
+            "title": "Education",
             "description": "Lorem ipsum dolor sit amet. Ea quas rerum sit unde quam et alias atque vel deserunt possimus. Nam aspernatur quibusdam At quam voluptatem rem labore consequatur sit fugit exercitationem. Non galisum voluptatum qui fugiat harum qui culpa rerum.",
             "pageDescription": "Lorem ipsum dolor sit amet. Ea quas rerum sit unde quam et alias atque vel deserunt possimus. Nam aspernatur quibusdam At quam voluptatem rem labore consequatur sit fugit exercitationem. Non galisum voluptatum qui fugiat harum qui culpa rerum.",
-            "labels": "Project 1, America, Iowa, University, Science, Scientist, Parkinsons",
+            "labels": "Education, Turkey, University, Science, Istanbul, Maastricht, HighSchool",
             "link1": {
                 "name": "Link",
                 "link": "https://www.ishetalvrijdag.nl/"
@@ -42,15 +42,16 @@
         },
         {
             "image": "projects/MaastrichtUniversity.png",
-            "image2": "projects/Basak1.png",
+            "image2": "projects/dummy.jpeg",
+            "image3": "projects/dummy.jpeg",
             "alt": "Project Image",
-            "title": "Project 2",
+            "title": "CV",
             "description": "Lorem ipsum dolor sit amet. Ea quas rerum sit unde quam et alias atque vel deserunt possimus. Nam aspernatur quibusdam At quam voluptatem rem labore consequatur sit fugit exercitationem. Non galisum voluptatum qui fugiat harum qui culpa rerum.",
             "pageDescription": "Lorem ipsum dolor sit amet. Ea quas rerum sit unde quam et alias atque vel deserunt possimus. Nam aspernatur quibusdam At quam voluptatem rem labore consequatur sit fugit exercitationem. Non galisum voluptatum qui fugiat harum qui culpa rerum.",
-            "labels": "Project 2, America, Iowa, University, Science, Scientist, Parkinsons",
+            "labels": "CV, Experience, Extracurricular, Activities, Education, Awards, Projects, Internship",
             "link1": {
-                "name": "Link",
-                "link": "https://www.ishetalvrijdag.nl/"
+                "name": "Open CV",
+                "link": "./CV.pdf"
             }
         }
     ]

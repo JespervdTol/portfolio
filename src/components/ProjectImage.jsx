@@ -3,7 +3,6 @@ import Slideshow from './Slideshow';
 
 const ProjectImage = ({ project }) => {
   const images = [
-    project.image,
     project.image2,
     project.image3,
     project.image4,

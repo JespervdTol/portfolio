@@ -20,7 +20,7 @@ const App = ({ currentPage, setCurrentPage }) => {
   const experiencePage = useRef(null);
   const contactPage = useRef(null);
 
-  const images = ['images/Basak2.png', 'images/Basak3.png', 'images/Basak4.png'];
+  const images = ['images/Basakportfolio3.png', 'images/Basakportfolio8.jpeg', 'images/Basakportfolio6.jpeg'];
 
   const [activeSection, setActiveSection] = useState(null);
 
@@ -71,14 +71,14 @@ const App = ({ currentPage, setCurrentPage }) => {
           <StyledButton text="Contact me" onClick={() => contactPage.current.scrollIntoView({ behavior: 'smooth' })} />
         </div>
         <div className="col-lg-6 d-flex justify-content-center align-items-center mt-5">
-          <img className='mainPicture' src="images/Basak1.png" alt="main" />
+          <img className='mainPicture' src="images/Basakportfolio9.jpeg" alt="main" />
         </div>
       </div>
 
       {/* Biography */}
       <br></br>
       <div ref={biographyPage} id='biographyPage'></div>
-      <div className="page d-flex justify-content-center align-items-center">
+      <div className="page d-flex justify-content-center align-items-center margin-next-page">
         <div className="row">
           <div className="col-lg-6 d-flex flex-column justify-content-center align-items-center mt-5">
             <Slideshow images={images} />
@@ -89,9 +89,9 @@ const App = ({ currentPage, setCurrentPage }) => {
               <p className="mb-4">My name is Başak Su Günal and I am 19 years old. I have lived in Turkiye my whole life however I moved to the Netherlands when I was 17 to start university. 
                 My favorite city is Istanbul and my favorite part of the city is the cats. I want to focus on neurology and genetics therefore I decided to move abroad to follow my ambitions. I am currently studying in Maastricht University. At some point in my life I want to go all over the world however I also want to become a scientist and help the community.
               </p>
-              <div className="d-flex justify-content-center gap-5">
+              <div className="d-flex justify-content-center gap-5 mb-5">
                 <StyledButton text="Skills" onClick={() => setCurrentPage("Skills")}  />
-                <StyledButton text="Ambitions" onClick={() => setCurrentPage("Ambitions")}  />
+                <StyledButton text="Hobby's" onClick={() => setCurrentPage("Ambitions")}  />
               </div>
             </div>
           </div>
@@ -125,7 +125,7 @@ const App = ({ currentPage, setCurrentPage }) => {
       {/* Contact */}
       <br></br>
       <div ref={contactPage} id='contactPage'></div>
-      <div className="page container mt-5">
+      <div className="page container margin-contact-page">
         <div className="row justify-content-center">
           <div className="col-md-8 mt-5">
             <div className="card shadow-lg border-0 rounded-lg mt-5">

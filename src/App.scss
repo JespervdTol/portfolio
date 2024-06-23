@@ -274,11 +274,6 @@ body {
   width: $imageWidth;
 }
 
-.mainPicture {
-  z-index: 1;
-  transition: all 1s linear;
-}
-
 .title {
   font-size: 3rem;
 }
@@ -444,8 +439,16 @@ body {
     padding: 20px;
   }
 
-  #contactPage {
-    margin-top: 1550px;
+  .mobile-margin {
+    margin: 450px 0px 40px 0px;
+  }
+
+  .margin-next-page {
+    margin-top: 500px;
+  }
+
+  .margin-contact-page {
+    margin-top: 800px;
   }
 
   #homePage .imageContainer {

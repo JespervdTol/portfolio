@@ -22,7 +22,7 @@ function NewPage({ setCurrentPage, currentPage }) {
         {currentPage === "Skills" && (
           <div className='d-flex flex-column justify-content-center h-100'>
             <div className="d-flex justify-content-center align-items-center mb-5">
-              <img className='mainPicture' src="images/Basak1.png" alt="main" />
+              <img className='mainPicture mobile-margin' src="images/Basakportfolio5.jpeg" alt="main" />
             </div>
             <p className="mb-4">Lorem ipsum dolor sit amet. In tempore tempore qui quis nesciunt sit dolor nihil ut ipsum repellat. Ut expedita consequatur ut fugiat numquam sit omnis consequatur id mollitia quia qui aspernatur autem!
               Et voluptates nesciunt a sunt enim non quae expedita ut amet provident est rerum distinctio. A delectus dignissimos eos porro dignissimos est reiciendis dolores.
@@ -33,7 +33,7 @@ function NewPage({ setCurrentPage, currentPage }) {
           <div className='d-flex flex-column justify-content-center h-100'>
             <br></br>
             <div className="d-flex justify-content-center align-items-center mb-5">
-              <img className='mainPicture' src="images/Basak1.png" alt="main" />
+              <img className='mainPicture mobile-margin' src="images/Basakportfolio7.jpeg" alt="main" />
             </div>
             <p className="mb-4">Lorem ipsum dolor sit amet. In tempore tempore qui quis nesciunt sit dolor nihil ut ipsum repellat. Ut expedita consequatur ut fugiat numquam sit omnis consequatur id mollitia quia qui aspernatur autem!
               Et voluptates nesciunt a sunt enim non quae expedita ut amet provident est rerum distinctio. A delectus dignissimos eos porro dignissimos est reiciendis dolores.
@@ -43,7 +43,8 @@ function NewPage({ setCurrentPage, currentPage }) {
         {/* Project */}
         {currentPage !== "Ambitions" && currentPage !== "Skills" && (
           <div className='d-flex flex-column justify-content-center'>
-              <span className='d-flex flex-column align-items-center'>
+              <br></br>
+              <span className='d-flex flex-column align-items-center mobile-margin'>
               <ProjectImage project={project}/>
               </span>
               <h2 className='mt-4'>{project.title}</h2>
@@ -53,6 +54,7 @@ function NewPage({ setCurrentPage, currentPage }) {
               {'link1' in project ? <StyledButton text={project.link1.name} className="px-5" onClick={() => window.open(project.link1.link, '_blank')} /> : ""}
               {'link2' in project ? <StyledButton text={project.link2.name} className="px-5" onClick={() => window.open(project.link2.link, '_blank')} /> : ""}
             </div>
+              <br></br>
           </div>
         )}
       </div>
