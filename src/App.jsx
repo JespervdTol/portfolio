@@ -6,8 +6,8 @@ import ProjectElement from './components/ProjectElement';
 import AboutElement from './components/AboutElement';
 import Slideshow from './components/Slideshow';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
-import { faGithubSquare, faInstagramSquare, faLinkedin, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
+import { faPaperPlane } from '@fortawesome/free-regular-svg-icons';
+import { faInstagramSquare, faLinkedin, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
 import data from './data.json';
 
 const App = ({ currentPage, setCurrentPage }) => {
@@ -19,6 +19,8 @@ const App = ({ currentPage, setCurrentPage }) => {
   const biographyPage = useRef(null);
   const experiencePage = useRef(null);
   const contactPage = useRef(null);
+  
+  const paperPlaneRef = useRef(null);
 
   const images = ['images/Basakportfolio3.png', 'images/Basakportfolio8.jpeg', 'images/Basakportfolio6.jpeg'];
 
@@ -49,6 +51,16 @@ const App = ({ currentPage, setCurrentPage }) => {
     });
   };
 
+  const handlePlaneClick = () => {
+    const plane = paperPlaneRef.current;
+    if (plane) {
+      plane.classList.add('fly-away');
+      setTimeout(() => {
+        plane.classList.remove('fly-away');
+      }, 5000);
+    }
+  };
+
   return (
     <>
       {/* Navigation */}
@@ -76,7 +88,7 @@ const App = ({ currentPage, setCurrentPage }) => {
       </div>
 
       {/* Biography */}
-      <br></br>
+      <br />
       <div ref={biographyPage} id='biographyPage'></div>
       <div className="page d-flex justify-content-center align-items-center margin-next-page">
         <div className="row">
@@ -90,8 +102,8 @@ const App = ({ currentPage, setCurrentPage }) => {
                 My favorite city is Istanbul and my favorite part of the city is the cats. I want to focus on neurology and genetics therefore I decided to move abroad to follow my ambitions. I am currently studying in Maastricht University. At some point in my life I want to go all over the world however I also want to become a scientist and help the community.
               </p>
               <div className="d-flex justify-content-center gap-5 mb-5">
-                <StyledButton text="Skills" onClick={() => setCurrentPage("Skills")}  />
-                <StyledButton text="Hobby's" onClick={() => setCurrentPage("Ambitions")}  />
+                <StyledButton text="Skills" onClick={() => setCurrentPage("Skills")} />
+                <StyledButton text="Hobby's" onClick={() => setCurrentPage("Ambitions")} />
               </div>
             </div>
           </div>
@@ -99,7 +111,7 @@ const App = ({ currentPage, setCurrentPage }) => {
       </div>
 
       {/* Experience */}
-      <br></br>
+      <br />
       <div ref={experiencePage} id='experiencePage'></div>
       <div className="page d-flex justify-content-center mt-5">
         <div className="container mt-5">
@@ -123,11 +135,11 @@ const App = ({ currentPage, setCurrentPage }) => {
       </div>
 
       {/* Contact */}
-      <br></br>
+      <br />
       <div ref={contactPage} id='contactPage'></div>
       <div className="page container margin-contact-page">
-        <div className="row justify-content-center">
-          <div className="col-md-8 mt-5">
+        <div className="row justify-content-between align-items-center">
+          <div className="col-md-6 mt-5">
             <div className="card shadow-lg border-0 rounded-lg mt-5">
               <div className="contact-header card-header py-3">
                 <h3 className="contact-text text-center fw-bold">Contact me</h3>
@@ -169,31 +181,38 @@ const App = ({ currentPage, setCurrentPage }) => {
               </div>
             </div>
           </div>
-        </div>
-        <div className="row justify-content-center mt-5">
-          <div className="col-md-4 text-center">
-            <h5>Find me on socials!</h5>
-            <div id='socials' className="d-flex justify-content-around mt-4">
+          <div className="col-md-6 text-center d-flex align-items-center justify-content-center mt-5">
+            <div>
               <FontAwesomeIcon
-                icon={faLinkedin}
-                fontSize={50}
-                onClick={() => window.open(user.linkedIn, '_blank')}
-                className="social-icon"
+                icon={faPaperPlane}
+                fontSize={100}
+                className="icon-header"
+                ref={paperPlaneRef}
+                onClick={handlePlaneClick}
               />
-              <FontAwesomeIcon
-                icon={faInstagramSquare}
-                fontSize={50}
-                onClick={() => window.open(user.instagram, '_blank')}
-                className="social-icon"
-              />
-              <FontAwesomeIcon
-                icon={faTwitterSquare}
-                fontSize={50}
-                onClick={() => window.open(user.twitter, '_blank')}
-                className="social-icon"
-              />
+              <h5 className="font-weight-bold">Find me on socials!</h5>
+              <div className="line-separator"></div>
+              <div id='socials' className="d-flex justify-content-around mt-4">
+                <FontAwesomeIcon
+                  icon={faLinkedin}
+                  fontSize={60}
+                  onClick={() => window.open(user.linkedIn, '_blank')}
+                  className="social-icon"
+                />
+                <FontAwesomeIcon
+                  icon={faInstagramSquare}
+                  fontSize={60}
+                  onClick={() => window.open(user.instagram, '_blank')}
+                  className="social-icon"
+                />
+                <FontAwesomeIcon
+                  icon={faTwitterSquare}
+                  fontSize={60}
+                  onClick={() => window.open(user.twitter, '_blank')}
+                  className="social-icon"
+                />
+              </div>
             </div>
-            <br></br>
           </div>
         </div>
       </div>

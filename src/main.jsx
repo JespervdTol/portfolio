@@ -7,7 +7,6 @@ import Project from './NewPage.jsx';
 function Root() {
   const [currentPage, setCurrentPage] = useState("Home");
 
-  // Store scroll position when page changes
   useEffect(() => {
     if (currentPage === "Home") {
       const handleScroll = () => {
@@ -19,7 +18,6 @@ function Root() {
     }
   }, [currentPage]);
 
-  // Restore scroll position when navigating back to home
   useEffect(() => {
     if (currentPage === "Home") {
       const scrollPosition = sessionStorage.getItem('scrollPosition');

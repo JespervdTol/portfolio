@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import '../App.scss'; // Ensure you have a corresponding Slideshow.scss file for styles
+import '../App.scss';
 
 const Slideshow = ({ images }) => {
   const [slideIndex, setSlideIndex] = useState(1);
@@ -32,15 +32,12 @@ const Slideshow = ({ images }) => {
       newIndex = slides.length;
     }
 
-    // Hide all slides
     Array.from(slides).forEach((slide) => {
       slide.style.display = 'none';
     });
 
-    // Display the current slide
     slides[newIndex - 1].style.display = 'block';
 
-    // Update active state for dots
     Array.from(dots).forEach((dot, index) => {
       if (index === newIndex - 1) {
         dot.classList.add('active');
@@ -49,7 +46,6 @@ const Slideshow = ({ images }) => {
       }
     });
 
-    // Update state
     setSlideIndex(newIndex);
   };
 

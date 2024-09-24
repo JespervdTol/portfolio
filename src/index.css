@@ -1,7 +1,8 @@
-:root{
-  --background: #faf0e6;
+:root {
+  --background: linear-gradient(135deg, #fff6ec, #ffd8a9);
 }
-
-body{
-  background-color: var(--background);
+/* faf0e6 ffe4c4*/
+body {
+  background: var(--background);
+  background-attachment: fixed;
 }
