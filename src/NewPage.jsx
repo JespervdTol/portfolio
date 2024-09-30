@@ -17,6 +17,7 @@ function NewPage({ setCurrentPage, currentPage }) {
 
   return (
     <>
+    <div class="blob-container"></div>
       <div id='newPage' className="d-flex flex-column align-items-center justify-content-center gap-3 w-50 mx-auto px-5">
         <StyledButton text="Back" className="position-absolute top-0 start-0 px-5 m-5" onClick={() => setCurrentPage("Home")} />
         {currentPage === "Skills" && (

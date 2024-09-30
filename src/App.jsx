@@ -63,6 +63,7 @@ const App = ({ currentPage, setCurrentPage }) => {
 
   return (
     <>
+    <div class="background-container"></div>
       {/* Navigation */}
       <div id="navigation" className="d-flex align-items-center position-fixed gap-5 mt-5 start-50 translate-middle">
         <button className={activeSection === 'homePage' ? 'active' : ''} onClick={() => homePage.current.scrollIntoView({ behavior: 'smooth' })}>Home</button>

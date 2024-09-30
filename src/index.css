@@ -1,8 +1,46 @@
-:root {
-  --background: linear-gradient(135deg, #fff6ec, #ffd8a9);
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
 }
-/* faf0e6 ffe4c4*/
-body {
-  background: var(--background);
-  background-attachment: fixed;
+
+.background-container::before,
+.background-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  border-radius: 45%;
+  opacity: 0.6;
+  animation: blob-animation 20s ease-in-out infinite;
+}
+
+.background-container::before {
+  background-color: #ffd8a9;
+}
+
+.background-container::after {
+  background-color: #fff6ec;
+  animation-duration: 25s;
+}
+
+@keyframes blob-animation {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(10%, -5%) scale(1.05);
+  }
+  50% {
+    transform: translate(20%, 10%) scale(1.1);
+  }
+  75% {
+    transform: translate(10%, 20%) scale(1.05);
+  }
 }
