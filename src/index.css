@@ -3,8 +3,7 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+  height: 100vh; 
   z-index: -1;
 }
 
@@ -18,7 +17,7 @@
   height: 200%;
   border-radius: 45%;
   opacity: 0.6;
-  animation: blob-animation 20s ease-in-out infinite;
+  animation: background-animation 20s ease-in-out infinite;
 }
 
 .background-container::before {
@@ -30,7 +29,7 @@
   animation-duration: 25s;
 }
 
-@keyframes blob-animation {
+@keyframes background-animation {
   0%, 100% {
     transform: translate(0, 0) scale(1);
   }

@@ -171,13 +171,6 @@ body {
   font-size: 3rem;
 }
 
-#homePage .line {
-  transform: translate(-50%, -50%) rotate(-75deg);
-  top: 50%;
-  left: 55%;
-  width: 600px;
-}
-
 // About me
 .aboutElement {
   border: solid 4px $secondaryColor;
@@ -201,9 +194,6 @@ body {
 }
 
 // Experience
-#experiencePage {
-  height: max-content;
-}
 
 .projectElement img {
   width: 100%;
@@ -231,10 +221,6 @@ body {
 }
 
 // Contact
-
-#contactPage {
-  margin-top: 200px;
-}
 
 #contactPage hr {
   height: 6px;
@@ -300,11 +286,6 @@ body {
   border-radius: 0px 0px 8px 8px;
 }
 
-.page {
-  height: 100vh;
-  padding-inline: $pagePadding;
-}
-
 #contactPage .col-md-6 {
   display: flex;
   align-items: center;
@@ -347,6 +328,11 @@ body {
   .page {
     padding-inline: 100px;
   }
+
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
   
   .title {
     font-size: 2.5rem;
@@ -355,10 +341,6 @@ body {
   .styledButton {
     padding: 8px 10%;
     font-size: 1.2rem;
-  }
-
-  #homePage .line {
-    width: 500px;
   }
 }
 
@@ -381,18 +363,10 @@ body {
   }
 
   .margin-next-page {
-    margin-top: 500px;
+    margin-top: 200px;
   }
-
-  // .margin-contact-page {
-  //   margin-top: 800px;
-  // }
 
   #homePage .imageContainer {
-    display: none;
-  }
-
-  #homePage .line {
     display: none;
   }
 
@@ -553,8 +527,8 @@ img {
     font-size: 16px;
   }
 
-  #homePage .line {
-    width: 400px;
+  #contactPage {
+    margin-top: 100%;
   }
 }
 
@@ -612,6 +586,10 @@ img {
   .dot {
     width: 10px;
     height: 10px;
+  }
+
+  #contactPage {
+    margin-top: 100%;
   }
 }
 
